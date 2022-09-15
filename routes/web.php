@@ -32,18 +32,15 @@ Route::get('/test/{name}', function($name) {
 });
 
 
-
-Route::get('/', function () {
-    return view('test');
-});
-
-Route::get('/test', [Test::class, 'index']);
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function( $name ) {
+Route::get('/test', [Test::class, 'index']);
+
+
+Route::get('/about/{name}', function( $name ) {
     return view('about', [ 'name' => $name]);
 });
+
