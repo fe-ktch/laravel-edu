@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Test;
+use App\Http\Controllers\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +33,6 @@ Route::get('/test/{name}', function($name) {
 });
 
 
-*/
 Route::get('/', function () {
     return view('welcome');
 });
@@ -40,7 +40,16 @@ Route::get('/', function () {
 Route::get('/test', [Test::class, 'index']);
 
 
-Route::get('/about/{name}', function( $name ) {
-    return view('about', [ 'name' => $name]);
-});
+Route::get('/about', function() {
+    $name = "Béla";
+    $email = "bela@email.com";
 
+    return view('about', compact('name','email'));
+});
+*/
+
+
+Route::get('/about_admin', function() {
+    return view('admin/about_admin', [ 'names'
+        => ['Béla', 'Pista', 'Kata', 'Géza']]);
+});
