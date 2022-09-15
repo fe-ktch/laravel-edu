@@ -3,11 +3,18 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Test;
 use App\Http\Controllers\ServiceController;
-
+use App\Http\Controllers\StudentController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/uj-diak', [StudentController::class, "newStudent"]);
+
+
+
+
+/*
 
 Route::get('/test', [ Test::class, 'index']);
 
