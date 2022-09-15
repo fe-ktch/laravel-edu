@@ -1,5 +1,6 @@
 <h1>Töltse ki a mezőket</h1>
 <form action="submit-student" method="post">
+    {{ csrf_field( ) }}
     <p>
         <label for=""> Név: </label>
         <input type="text" name="name" placeholder="Név">

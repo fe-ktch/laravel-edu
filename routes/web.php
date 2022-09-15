@@ -10,9 +10,7 @@ Route::get('/', function () {
 });
 
 Route::get('/uj-diak', [StudentController::class, "newStudent"]);
-
-
-
+Route::post('/submit-student', [StudentController::class, 'submitStudent']);
 
 /*
 
