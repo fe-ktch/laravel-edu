@@ -5,12 +5,23 @@ use App\Http\Controllers\Test;
 use App\Http\Controllers\ServiceController;
 
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/test', [ Test::class, 'index']);
+
+
+Route::get('/about', [ ServiceController::class, 'index']);
+
 Route::get('/about_admin', function() {
     return view('admin/about_admin', [ 'names'
         => ['Béla', 'Pista', 'Kata', 'Géza']]);
 });
 
-
+Route::get('/products', function () {
+    return view('templates/products');
+});
 
 
 
