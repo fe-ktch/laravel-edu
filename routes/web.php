@@ -4,6 +4,47 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Test;
 use App\Http\Controllers\ServiceController;
 
+
+Route::get('/about_admin', function() {
+    return view('admin/about_admin', [ 'names'
+        => ['Béla', 'Pista', 'Kata', 'Géza']]);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,7 +90,3 @@ Route::get('/about', function() {
 */
 
 
-Route::get('/about_admin', function() {
-    return view('admin/about_admin', [ 'names'
-        => ['Béla', 'Pista', 'Kata', 'Géza']]);
-});
